@@ -21,7 +21,7 @@
 [colors]
 ;background = ${xrdb:color0:#222}
 background = #8016213e
-background-alt = #444
+background-alt = #444e
 ;foreground = ${xrdb:color7:#222}
 foreground = #ffffff
 foreground-alt = #ffffff
@@ -60,7 +60,7 @@ font-3 = Font Awesome 5 Free:pixelsize=12;2
 font-4 = Font Awesome 5 Free Solid:pixelsize=12;2
 font-5 = Font Awesome 5 Brands:pixelsize=12;2
 
-modules-left = i3
+modules-left = bspwm i3
 
 tray-position = none
 tray-padding = 2
@@ -112,24 +112,36 @@ label-unmounted-foreground = ${colors.foreground-alt}
 [module/bspwm]
 type = internal/bspwm
 
-label-focused = %index%
+label-focused = %icon%
 label-focused-background = ${colors.background-alt}
 ;label-focused-underline= ${colors.primary}
 label-focused-padding = 2
 
-label-occupied = %index%
+label-occupied = %icon%
 label-occupied-padding = 2
 
-label-urgent = %index%!
+label-urgent = %icon%!
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 2
 
-label-empty = %index%
+label-empty = %icon%
 label-empty-foreground = ${colors.foreground-alt}
 label-empty-padding = 2
 
 ; Separator in between workspaces
 ; label-separator = |
+
+ws-icon-0 = I;
+ws-icon-1 = II;
+ws-icon-2 = III;
+ws-icon-3 = IV;
+ws-icon-4 = V;
+ws-icon-5 = VI;
+ws-icon-6 = VII;
+ws-icon-7 = VIII;
+ws-icon-8 = XI;
+ws-icon-9 = X;
+
 
 [module/i3]
 type = internal/i3
@@ -548,5 +560,5 @@ pin-workspaces = true
 override-redirect = true
 wm-restack = i3
 
-modules-left = i3
+modules-left = bspwm i3
 
