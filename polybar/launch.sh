@@ -20,5 +20,6 @@ killall -q polybar
  polybar -r rightScreenWorkspace 2>&1 | tee -a /tmp/polybar2.log & disown
  polybar -r leftScreenWindowName 2>&1 | tee -a /tmp/polybar3.log & disown
  polybar -r leftScreenTray 2>&1 | tee -a /tmp/polybar4.log & disown
+ polybar -r rightScreenTray 2>&1 | tee -a /tmp/polybar5.log & disown
 echo "Bars launched..."
 

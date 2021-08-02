@@ -20,17 +20,17 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #8016213e
-background-alt = #444e
+background = #7016213e
+background-alt = #2ffffffe
 ;foreground = ${xrdb:color7:#222}
 foreground = #ffffff
 foreground-alt = #ffffff
-primary = #1b9fc6
+primary = #e2b9fc6
 secondary = #ffffff
 alert = #bd2c40
 
 [bar/leftScreenWorkspace]
-monitor = ${env:MONITOR:DisplayPort-1}
+monitor = ${env:MONITOR:DisplayPort-2}
 width = 210
 height = 27
 offset-x = 10
@@ -139,7 +139,7 @@ ws-icon-4 = V;
 ws-icon-5 = VI;
 ws-icon-6 = VII;
 ws-icon-7 = VIII;
-ws-icon-8 = XI;
+ws-icon-8 = IX;
 ws-icon-9 = X;
 
 
@@ -449,7 +449,7 @@ margin-bottom = 300
 ; vim:ft=dosini
 
 [bar/leftScreenWindowName]
-monitor = ${env:MONITOR:DisplayPort-1}
+monitor = ${env:MONITOR:DisplayPort-2}
 width = 200
 height = 27
 offset-x = 45%
@@ -486,7 +486,7 @@ wm-restack = i3
 
 [bar/leftScreenTray]
 
-monitor = ${env:MONITOR:DisplayPort-1}
+monitor = ${env:MONITOR:DisplayPort-2}
 width = 610
 height = 27
 offset-x = 1298
@@ -516,14 +516,55 @@ font-3 = Font Awesome 5 Free:pixelsize=12;2
 font-4 = Font Awesome 5 Free Solid:pixelsize=12;2
 font-5 = Font aweesomee 5 Brands:pixelsize=12;2
 
-modules-right = filesystem  pulseaudio xkeyboard memory cpu eth date powermenu
+modules-right = filesystem  pulseaudio xkeyboard memory cpu date powermenu
 
 override-redirect = true
 wm-restack = i3
 
+[bar/rightScreenTray]
+
+monitor = ${env:MONITOR:DisplayPort-3}
+width = 500
+height = 27
+offset-x = 1410
+;offset-y = 1%
+radius = 15.0
+fixed-center = false
+
+font-0 = fixed:pixelsize=10;1
+font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-2 = siji:pixelsize=10;1
+font-3 = Font Awesome 5 Free:pixelsize=12;2
+font-4 = Font Awesome 5 Free Solid:pixelsize=12;2
+font-5 = Font Awesome 5 Brands:pixelsize=12;2
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 3
+line-color = #f00
+
+border-size = 4
+border-color = #00000000
+
+padding-left = 3
+padding-right = 3
+
+module-margin-left = 2
+module-margin-right = 2
+
+; Only show workspaces on the same output as the bar
+pin-workspaces = true
+
+override-redirect = true
+wm-restack = i3
+
+modules-center = powermenu
+
+
 [bar/rightScreenWorkspace]
 
-monitor = ${env:MONITOR:DisplayPort-2}
+monitor = ${env:MONITOR:DisplayPort-3}
 width = 210
 height = 27
 offset-x = 10
@@ -561,4 +602,3 @@ override-redirect = true
 wm-restack = i3
 
 modules-left = bspwm i3
-
