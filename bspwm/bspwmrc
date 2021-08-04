@@ -3,8 +3,8 @@
 pgrep -x sxhkd > /dev/null || sxhkd &
 $HOME/.config/polybar/launch.sh
 
-conky -d -c ~/.config/conky/conkyTime
-conky -d -c ~/.config/conky/conkyrc
+conky -b -d -c ~/.config/conky/conkyTime
+conky -b -d -c ~/.config/conky/conkyrc
 
 # PyWal sourcing the colors
 . "${HOME}/.cache/wal/colors.sh"
