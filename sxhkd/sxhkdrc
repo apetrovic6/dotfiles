@@ -10,6 +10,10 @@ super + Return
 super + @space
 	rofi -show drun -show-icons
 
+# file explorer
+super + shift + Return
+	Thunar
+
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
@@ -125,9 +129,7 @@ super + {Left,Down,Up,Right}
 Print
 	flameshot gui
 
-# keboard layout
-
-# US layout
+# change keyboard layout
 F12
 	{setxkbmap us, setxkbmap hr}
 

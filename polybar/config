@@ -29,9 +29,10 @@ primary = #e2b9fc6
 secondary = #ffffff
 alert = #bd2c40
 
+
 [bar/leftScreenWorkspace]
 monitor = ${env:MONITOR:DisplayPort-2}
-width = 210
+width = 200
 height = 27
 offset-x = 10
 ;offset-y = 1%
@@ -66,8 +67,8 @@ tray-position = none
 tray-padding = 2
 ;tray-background = #0063ff
 
-;wm-restack = bspwm
-wm-restack = i3
+wm-restack = bspwm
+;wm-restack = i3
 
 override-redirect = true
 
@@ -271,9 +272,9 @@ type = internal/network
 interface = eno1
 interval = 3.0
 
-format-connected-underline = #55aa55
+;format-connected-underline = #55aa55
 format-connected-prefix = "  "
-format-connected-prefix-foreground = ${colors.foreground-alt}
+;format-connected-prefix-foreground = ${colors.foreground-alt}
 label-connected = %local_ip%
 
 format-disconnected =
@@ -419,19 +420,19 @@ label-close-foreground = ${colors.secondary}
 label-separator = |
 label-separator-foreground = ${colors.foreground-alt}
 
-menu-0-0 = reboot
+menu-0-0 = R
 menu-0-0-exec = menu-open-1
-menu-0-1 = power off
+menu-0-1 = P
 menu-0-1-exec = menu-open-2
 
-menu-1-0 = cancel
+menu-1-0 = C
 menu-1-0-exec = menu-open-0
 menu-1-1 = reboot
 menu-1-1-exec = sudo reboot
 
-menu-2-0 = power off
+menu-2-0 = P
 menu-2-0-exec = sudo poweroff
-menu-2-1 = cancel
+menu-2-1 = C
 menu-2-1-exec = menu-open-0
 
 [settings]
@@ -450,7 +451,7 @@ margin-bottom = 300
 
 [bar/leftScreenWindowName]
 monitor = ${env:MONITOR:DisplayPort-2}
-width = 200
+width = 300
 height = 27
 offset-x = 45%
 radius = 15.0
@@ -487,9 +488,9 @@ wm-restack = i3
 [bar/leftScreenTray]
 
 monitor = ${env:MONITOR:DisplayPort-2}
-width = 610
+width = 500
 height = 27
-offset-x = 1298
+offset-x = 1410
 ;offset-y = 1%
 radius = 15.0
 fixed-center = false
@@ -499,7 +500,7 @@ foreground = ${colors.foreground}
 
 line-size = 3
 line-color = #f00
-
+			
 border-size = 4
 border-color = #00000000
 
@@ -516,7 +517,7 @@ font-3 = Font Awesome 5 Free:pixelsize=12;2
 font-4 = Font Awesome 5 Free Solid:pixelsize=12;2
 font-5 = Font aweesomee 5 Brands:pixelsize=12;2
 
-modules-right = filesystem eth pulseaudio xkeyboard memory cpu powermenu
+modules-center = filesystem eth xkeyboard memory cpu
 
 override-redirect = true
 wm-restack = i3
@@ -524,9 +525,9 @@ wm-restack = i3
 [bar/rightScreenTray]
 
 monitor = ${env:MONITOR:DisplayPort-3}
-width = 500
+width = 350
 height = 27
-offset-x = 1410
+offset-x = 1560
 ;offset-y = 1%
 radius = 15.0
 fixed-center = false
@@ -553,19 +554,15 @@ padding-right = 3
 module-margin-left = 2
 module-margin-right = 2
 
-; Only show workspaces on the same output as the bar
-pin-workspaces = true
-
 override-redirect = true
-wm-restack = i3
+wm-restack = bspwm
 
-modules-center = powermenu
-
+modules-center = pulseaudio date powermenu
 
 [bar/rightScreenWorkspace]
 
 monitor = ${env:MONITOR:DisplayPort-3}
-width = 210
+width = 200
 height = 27
 offset-x = 10
 ;offset-y = 1%
@@ -599,6 +596,6 @@ module-margin-right = 2
 pin-workspaces = true
 
 override-redirect = true
-wm-restack = i3
+wm-restack = bspwm
 
-modules-left = bspwm i3
+modules-center = bspwm i3
