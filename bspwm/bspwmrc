@@ -2,6 +2,7 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 $HOME/.config/polybar/launch.sh
+keyledsd --config=./keyledsd.conf &
 
 feh --bg-tile ~/Pictures/cthulhu.jpg
  
